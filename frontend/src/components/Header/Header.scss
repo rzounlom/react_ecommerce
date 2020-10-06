@@ -1,0 +1,19 @@
+header {
+  // a {
+  //   color: white;
+  //   text-decoration: none;
+
+  //   &:hover {
+  //     text-decoration: none;
+  //     color: rgb(226, 225, 225);
+  //   }
+  // }
+  a.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin-right: 3px;
+    }
+  }
+}

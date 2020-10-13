@@ -6,6 +6,7 @@ import colors from "colors";
 
 //routes imports
 import productRoutes from "./routes/productRoutes";
+import userRoutes from './routes/userRoutes'
 
 //import middleware
 import { notFound, errorHandler } from "./middleware/errorMiddleware";
@@ -14,11 +15,15 @@ dotenv.config();
 connectDB();
 const app = express();
 
+app.use(express.json())
+
 app.use(cors());
 
 app.get("/", (req, res) => res.send("API is running..."));
 
 app.use("/api/products", productRoutes);
+app.use("/api/users", userRoutes);
+
 
 //middlewares
 //404 middleware

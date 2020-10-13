@@ -16,7 +16,7 @@ import {
 import Rating from "../components/Rating/Rating";
 import { listProductDetails } from "../redux/actions/productActions";
 
-const ProductScreen = ({ match, history }) => {
+const ProductScreen = ({ history, match }) => {
   const [qty, setQty] = useState(1);
 
   const dispatch = useDispatch();
@@ -28,6 +28,7 @@ const ProductScreen = ({ match, history }) => {
     dispatch(listProductDetails(match.params.id));
   }, [dispatch, match]);
   console.log(match);
+
   const addToCartHandler = () => {
     history.push(`/cart/${match.params.id}?qty=${qty}`);
   };

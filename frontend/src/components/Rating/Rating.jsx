@@ -3,7 +3,7 @@ import "./Rating.scss";
 
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { FiStar } from "react-icons/fi";
-const Rating = ({ value, text, color }) => {
+const Rating = ({ value, text }) => {
   return (
     <div className="rating">
       <span>

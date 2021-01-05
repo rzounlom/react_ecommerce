@@ -6,7 +6,7 @@ import Order from "../models/orderModel";
 //@access   Public
 const addOrderItems = asyncHandler(async (req, res) => {
   const {
-    oderItems,
+    orderItems,
     shippingAddress,
     paymentMethod,
     itemsPrice,
@@ -20,7 +20,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
     throw new Error("No order Items");
   } else {
     const order = new Order({
-      oderItems,
+      orderItems,
       user: req.user._id,
       shippingAddress,
       paymentMethod,
@@ -31,7 +31,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
     });
 
     const createdOrder = await order.save();
-    res.status(201).json(createdOrder);
+    return res.status(201).json(createdOrder);
   }
 });
 

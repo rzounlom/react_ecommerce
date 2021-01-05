@@ -31,10 +31,10 @@ const orderSchema = mongoose.Schema(
       required: true,
     },
     paymentResult: {
-      id: { type: String, required: true },
-      status: { type: String, required: true },
-      update_time: { type: String, required: true },
-      email_address: { type: String, required: true },
+      id: { type: String, required: false },
+      status: { type: String, required: false },
+      update_time: { type: String, required: false },
+      email_address: { type: String, required: false },
     },
     taxPrice: {
       type: Number,
